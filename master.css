@@ -27,11 +27,18 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+.button-container{
+    display: flex;
+    flex-flow: column;
+}
 #container 
 {
     background-color: antiquewhite;
     z-index: 0;
     margin-top: 3%;
+    margin-left: 100px;
+    margin-right: 10%;
     display: flex;
     flex-flow: wrap;
     width: 536px;
@@ -43,7 +50,28 @@ h1 {
 .pixels{
     border: 1px black solid;
     width: 31.5px;
-    background-color: white;
     height: 31.5px;
     margin : 0 0 0 0;
+}
+.Clear{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(100,153,215,1) 100%);
+    padding: 15px 30px;
+    color: black;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+p{
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: black;
+}
+.color-picker{
+    margin-bottom: 10%;
+}
+.Color{
+    width: 160px;
+    height: 50px;
 }
