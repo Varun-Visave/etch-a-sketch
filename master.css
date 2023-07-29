@@ -31,6 +31,7 @@ h1 {
 .button-container{
     display: flex;
     flex-flow: column;
+    margin-right: 0%;
 }
 #container 
 {
@@ -38,7 +39,7 @@ h1 {
     z-index: 0;
     margin-top: 3%;
     margin-left: 100px;
-    margin-right: 10%;
+    margin-right: 19%;
     display: flex;
     flex-flow: wrap;
     width: 536px;
@@ -64,7 +65,7 @@ p{
     margin-bottom: 10%;
 }
 .Color{
-    width: 160px;
+    width: 230px;
     height: 50px;
     border-radius: 10px;
 }
