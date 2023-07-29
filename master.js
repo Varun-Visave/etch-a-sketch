@@ -10,9 +10,18 @@ function makeGrid()
             newDiv.classList.add('pixels');
             container.appendChild(newDiv);
         }
-        // const newLine = document.createElement('br');
-        // container.appendChild(newLine);
     }
 }
+
+const getDivs = document.querySelector('.pixels');
+
+container.addEventListener('mouseover', e => {
+    var target = e.target
+  
+    if (target !== container) {
+      target.classList.add('hovered')
+    }
+  })
+
 
 makeGrid();
