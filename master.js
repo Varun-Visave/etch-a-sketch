@@ -1,3 +1,4 @@
+// defining required constants
 const container = document.querySelector("#container");
 const getClearButton = document.querySelector('.Clear');
 const getColorPicker = document.querySelector('.Color');
@@ -7,8 +8,9 @@ const eraserRadio = document.getElementById("Eraser");
 const resetRadio = document.getElementById("Normal");
 let pixel = document.getElementsByClassName("pixels");
 
-
-function makeGrid() {
+//  Generating grid
+function makeGrid() 
+{
   for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
       const newDiv = document.createElement('div');
@@ -19,67 +21,69 @@ function makeGrid() {
   draw();
 }
 
-function clear() {
-  for (let i = 0; i < (16 * 16); i++) {
+//  Defining function which resets the grid
+function clear() 
+{
+  for (let i = 0; i < (16 * 16); i++) 
+  {
     pixel[i].style.backgroundColor = '';
   }
 }
-
-function selectColor() {
+//   taking color from the color picker
+function selectColor() 
+{
   return getColorPicker.value;
 }
 
+//  Defining draw function which is reponsible for executing the any one option
 function draw()
 {
-  for(let i = 0; i < pixel.length; i++)
+    for(let i = 0; i < pixel.length; i++)
+    {
+      pixel[i].addEventListener('mouseover', colorOption)
+    }
+  //  defining options which can be swtiched to
+  function colorOption()
   {
-    pixel[i].addEventListener('mouseover', colorOption)
-  }
-
-function colorOption(){
-  if(blackHueRadio.checked)
-  {
-    this.style.backgroundColor = generateBlackShades();
-  }
-  if(rainbowRadio.checked)
-  {
-    this.style.backgroundColor = generateRainbowShades();
-  }
-  if(resetRadio.checked)
-  {
-    this.style.backgroundColor = selectColor();
-  }
-  if(eraserRadio.checked)
-  {
-    this.style.backgroundColor =  "";
+    //  checks which radio button is selected (By default normal is checked)
+    if(blackHueRadio.checked)
+    {
+      this.style.backgroundColor = generateBlackShades();
+    }
+    if(rainbowRadio.checked)
+    {
+      this.style.backgroundColor = generateRainbowShades();
+    }
+    if(resetRadio.checked)
+    {
+      this.style.backgroundColor = selectColor();
+    }
+    if(eraserRadio.checked)
+    {
+      this.style.backgroundColor =  "";
+    }
   }
 }
-}
-
-// Event listener for the "Clear" button
+//  adding listener to the clear button
 getClearButton.addEventListener('click', clear);
 
-// Event listener for the "Black-Hues" radio button
+//  function which returns random shade of black
 function generateBlackShades()
-    {
-      const randomValue = Math.random();
-      const shadeValue = Math.floor(randomValue * 225);
-      const blackShade = `rgb(${shadeValue}, ${shadeValue}, ${shadeValue})`;
-      return blackShade;
-    }
+  {
+    const randomValue = Math.random();
+    const shadeValue = Math.floor(randomValue * 225);
+    const blackShade = `rgb(${shadeValue}, ${shadeValue}, ${shadeValue})`;
+    return blackShade;
+  }
 
-// Event listener for the "Rainbow" radio button
+//  function which returns random colors 
 function generateRainbowShades()
-    {
-      const randomValue = () => Math.floor(Math.random() * 256);
-      const redValue = randomValue();
-      const greenValue = randomValue();
-      const blueValue = randomValue();
-      return `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-    
-    }
+  {
+    const randomValue = () => Math.floor(Math.random() * 256);
+    const redValue = randomValue();
+    const greenValue = randomValue();
+    const blueValue = randomValue();
+    return `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+  }
 
-// Event listener for the "Eraser" radio button
-
-// Functions to handle different color options
 makeGrid();
