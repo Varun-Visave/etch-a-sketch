@@ -1,4 +1,4 @@
-const container = document.getElementById("container");
+const container = document.querySelector("#container");
 
 function makeGrid()
 {
@@ -12,16 +12,24 @@ function makeGrid()
         }
     }
 }
+const getDivs = container.querySelectorAll('.pixels');
+const getClearButton = document.querySelector('.Clear');
+const getParentContainer = document.querySelector('.Parent-Container');
 
-const getDivs = document.querySelector('.pixels');
+function clear() {
+  getDivs.forEach(div => {
+    div.style.backgroundColor = 'white';
+  });
+  console.log('check');
+}
 
 container.addEventListener('mouseover', e => {
     let target = e.target
   
     if (target !== container) {
-      target.classList.add('hovered')
+      target.style.backgroundColor = 'red';
     }
   })
 
-
+getClearButton.addEventListener('click', clear);
 makeGrid();
