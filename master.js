@@ -1,4 +1,8 @@
 const container = document.querySelector("#container");
+const getDivs = container.querySelectorAll('.pixels');
+const getClearButton = document.querySelector('.Clear');
+const getParentContainer = document.querySelector('.Parent-Container');
+const getColorPicker = document.querySelector('.Color');
 
 function makeGrid()
 {
@@ -12,15 +16,8 @@ function makeGrid()
         }
     }
 }
-const getDivs = container.querySelectorAll('.pixels');
-const getClearButton = document.querySelector('.Clear');
-const getParentContainer = document.querySelector('.Parent-Container');
 
 function clear() {
-  // getDivs.forEach(div => {
-  //   div.style.backgroundColor = 'white';
-  // });
-  // console.log('check');
   let pixel = document.getElementsByClassName("pixels");
   for(let i = 0; i < (16*16); i++)
   {
@@ -32,9 +29,12 @@ container.addEventListener('mouseover', e => {
     let target = e.target
   
     if (target !== container) {
-      target.style.backgroundColor = 'red';
+      target.style.backgroundColor = selectColor();
     }
   })
-
+function selectColor()
+{
+  return getColorPicker.value;
+}
 getClearButton.addEventListener('click', clear);
 makeGrid();
