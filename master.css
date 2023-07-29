@@ -34,7 +34,7 @@ h1 {
 }
 #container 
 {
-    background-color: antiquewhite;
+    background-color: whitesmoke;
     z-index: 0;
     margin-top: 3%;
     margin-left: 100px;
@@ -53,14 +53,6 @@ h1 {
     height: 31.5px;
     margin : 0 0 0 0;
 }
-.Clear{
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(100,153,215,1) 100%);
-    padding: 15px 30px;
-    color: black;
-    font-size: large;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-}
 
 p{
     font-size: larger;
@@ -74,4 +66,37 @@ p{
 .Color{
     width: 160px;
     height: 50px;
+    border-radius: 10px;
 }
+
+.Clear{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(100,153,215,1) 100%);
+    padding: 15px 30px;
+    color: black;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#Black-Hues{
+    margin: 10px 10px;
+}
+#Rainbow{
+    margin: 10px 10px;
+
+}
+#Eraser{
+    margin: 10px 10px;
+
+}
+.color-options{
+    font-size: large;
+    border: 2px black solid;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 15px 15px;
+    margin: 0 0 10%;
+    color: aliceblue;
+    background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);}
