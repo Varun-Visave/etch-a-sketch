@@ -1,0 +1,28 @@
+*{
+    margin : 0px 0px 0px 0px;
+
+}
+h1{
+    text-align: center;
+}
+.Parent-Container{
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#container 
+{
+    display: flex;
+    flex-flow: wrap;
+    width: 536px;
+    height: 535px;
+    border: 1px black solid;
+    align-self: center;
+    justify-self: center;
+}
+.pixels{
+    border: 1px black solid;
+    width: 31.5px;
+    height: 31.5px;
+}
