@@ -7,6 +7,7 @@ const rainbowRadio = document.getElementById("Rainbow");
 const eraserRadio = document.getElementById("Eraser"); 
 const resetRadio = document.getElementById("Normal");
 let pixel = document.getElementsByClassName("pixels");
+getColorPicker.value = '#00e0fa'
 
 //  Generating grid
 function makeGrid() 
