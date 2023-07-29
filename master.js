@@ -16,7 +16,7 @@ function makeGrid()
 const getDivs = document.querySelector('.pixels');
 
 container.addEventListener('mouseover', e => {
-    var target = e.target
+    let target = e.target
   
     if (target !== container) {
       target.classList.add('hovered')
