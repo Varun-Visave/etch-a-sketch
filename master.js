@@ -17,10 +17,15 @@ const getClearButton = document.querySelector('.Clear');
 const getParentContainer = document.querySelector('.Parent-Container');
 
 function clear() {
-  getDivs.forEach(div => {
-    div.style.backgroundColor = 'white';
-  });
-  console.log('check');
+  // getDivs.forEach(div => {
+  //   div.style.backgroundColor = 'white';
+  // });
+  // console.log('check');
+  let pixel = document.getElementsByClassName("pixels");
+  for(let i = 0; i < (16*16); i++)
+  {
+    pixel[i].style.backgroundColor = '';
+  }
 }
 
 container.addEventListener('mouseover', e => {
