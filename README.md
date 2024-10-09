@@ -1,2 +1,2 @@
 # etch-a-sketch
-Link to its page => https://programming-wizard.github.io/etch-a-sketch/
+Link to its page => https://varun-visave.github.io/etch-a-sketch/
